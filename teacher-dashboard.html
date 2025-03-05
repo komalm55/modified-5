@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <img src="images/hmslogo.png" alt="HMS Logo" class="logo">
+        <h1>🏫 HMS - Teacher Dashboard</h1>
+    </div>
+</header>
+
+<main>
+    <h2>👩‍🏫 Welcome, Teacher</h2>
+
+    <!-- Leave Requests Card -->
+    <div class="card" id="leaveRequests">
+        <h3>📄 Student Leave Requests</h3>
+        <p>Loading requests...</p>
+    </div>
+</main>
+
+<!-- Modal for Leave Request Details -->
+<div id="leaveDetailsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>📜 Leave Request Details</h2>
+        <table>
+            <tbody id="leaveDetailsTable"></tbody>
+        </table>
+        <button onclick="approveLeave('teacher')">✅ Approve & Forward to HOD</button>
+        <button onclick="rejectLeave()">❌ Reject</button>
+    </div>
+</div>
+
+
+
+<script src="teacher-script.js"></script>
+
+
+
+</body>
+</html>

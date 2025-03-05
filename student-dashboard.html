@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="header-container">
+        <img src="images/hmslogo.png" alt="HMS Logo" class="logo">
+        <h1>🏫 HMS - Student Dashboard</h1>
+    </div>
+</header>
+
+<main>
+    <h2>👋 Welcome, Dheeraj Mandava</h2>
+
+    <div class="card-container">
+        <!-- 🟢 Student Details Card -->
+        <div class="card">
+            <h3>👤 Student Details</h3>
+            <p><strong>Name:</strong> Dheeraj Mandava</p>
+            <p><strong>Roll No:</strong> 23491A4726</p>
+            <p><strong>Institute:</strong> QIS College of Engineering</p>
+            <p><strong>Section:</strong> IT1</p>
+        </div>
+
+        <!-- 🟢 Room Details Card -->
+        <div class="card">
+            <h3>🏠 Room Details</h3>
+            <p><strong>Room Number:</strong> B-304</p>
+            <p><strong>Category:</strong> Hosteller</p>
+            <p><strong>Type:</strong> Double Sharing</p>
+        </div>
+
+        <!-- 🟢 Due Bills Card -->
+        <div class="card">
+            <h3>💰 Due Bills</h3>
+            <p><strong>Mess Due:</strong> ₹2,000</p>
+            <p><strong>Laundry Due:</strong> ₹500</p>
+            <p><strong>Hostel Due:</strong> ₹5,000</p>
+        </div>
+
+    </div>
+            <!-- Generate Code Button -->
+            <button id="generateCodeBtn" onclick="generateSecurityCode()">🔑 Generate Security Code</button>
+            <div class="generatecodefield">
+
+            <!-- Display Generated Code -->
+            <p id="generatedCode" style="margin: 40px; font-size: 18px; color: #091708; background-color: rgb(253, 251, 249); max-width: 200px; "></p>
+        </div>
+    </div>
+
+
+        <!-- 🟢 Laundry Request Card -->
+<section>
+    <div class="container">
+        
+
+               <!-- 🟢 Leave Request Card -->
+<div class="card">
+    <h3>📝 Submit Leave Request</h3>
+    <form id="leaveForm">
+        <label for="leaveDate">From Date:</label>
+        <input type="date" id="leaveDate" required><br>
+
+        <label for="leaveToDate">To Date:</label>
+        <input type="date" id="leaveToDate" required><br>
+
+        <label for="approvers">Approvers:</label>
+        <select id="approvers" multiple required>
+            <option value="classTeacher">Class Teacher</option>
+            <option value="hod">HOD</option>
+            <option value="warden">Warden</option>
+        </select><br>
+
+        <label for="section">Section:</label>
+        <input type="text" id="section" placeholder="Enter section (e.g., IT1, ECE)" required><br>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" placeholder="Enter leave subject" required><br>
+
+        <label for="content">Leave Reason:</label>
+        <textarea id="content" placeholder="Describe your reason here" required></textarea><br>
+
+        <label for="parentPhone">Parent's Phone:</label>
+        <input type="text" id="parentPhone" placeholder="Parent Contact" required><br>
+
+        <label for="studentPhone">Student Phone:</label>
+        <input type="text" id="studentPhone" placeholder="Your Contact" required><br>
+
+        <button type="submit">📨 Submit Request</button>
+    </form>
+
+    <div id="leaveStatus"></div>
+</div>
+
+            <div class="stucard">
+                <div class="card">
+                    
+                    <h3>🧺 Laundry Request</h3>
+                    <form id="laundryForm">
+                        <label for="laundryName">👤 Name:</label>
+                        <input type="text" id="laundryName" placeholder="Enter your name" required><br>
+        
+                        <label for="laundryRoll">🎓 Roll Number:</label>
+                        <input type="text" id="laundryRoll" placeholder="Enter your roll number" required><br>
+        
+                        <label for="laundryRoom">🏠 Room Number:</label>
+                        <input type="text" id="laundryRoom" placeholder="Enter your room number" required><br>
+        
+                        <label for="laundryBlock">🏢 Block:</label>
+                        <input type="text" id="laundryBlock" placeholder="Enter your block name" required><br>
+        
+                        <button type="submit">📩 Submit Laundry Request</button>
+                    </form>
+                
+                </div>
+
+        <!-- 🟢 Report Card -->
+        <div class="card">
+            <h3>📜 Report a Problem</h3>
+            <form id="reportForm">
+                <label for="reportName">👤 Name:</label>
+                <input type="text" id="reportName" placeholder="Enter your name" required><br>
+
+                <label for="reportRoll">🎓 Roll Number:</label>
+                <input type="text" id="reportRoll" placeholder="Enter your roll number" required><br>
+
+                <label for="reportProblem">⚠️ Problem:</label>
+                <textarea id="reportProblem" placeholder="Describe your issue..." required></textarea><br>
+
+                <button type="submit">📩 Submit Report</button>
+            </form>
+        </div>
+     </div>
+ </div>
+</div>
+</section>
+</main>
+
+
+
+<script src="student-script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header-container">
+        <div class="logo-title">
+            <img src="images\hmslogo.png" alt="Logo" class="logo">
+            <h1 class="header-title">Hostel Management</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="hms-login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container section-spacing">
+        <h1>Welcome to the Hostel Management System</h1>
+        <p>Manage your hostel experience seamlessly.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="container section-spacing">
+        <h2 class="features-title">Our Features</h2>
+        <div class="features-grid">
+    
+            <!-- Stage 1 -->
+            <div class="stage-card">
+                <h3>Stage 1</h3>
+                <div class="feature-card" onclick="openPopup('leave-popup')">
+                    <h4 class="feature-title">Leave Letter System</h4>
+                    <img src="images/Letter.png" alt="Leave Letter Icon" class="feature-icon">
+                </div>
+                <div class="feature-card" onclick="openPopup('laundry-popup')">
+                    <h4 class="feature-title">Laundry System</h4>
+                    <img src="images/laundry.png" alt="Laundry Icon" class="feature-icon">
+                </div>
+                <div class="feature-card" onclick="openPopup('Report-Forms')">
+                    <h4 class="feature-title">Report-Forms</h4>
+                    <img src="images/report-forms.png" alt="Report Forms Icon" class="feature-icon">
+                </div>
+            </div>
+    
+            <!-- Stage 2 -->
+            <div class="stage-card">
+                <h3>Stage 2</h3>
+                <div class="feature-card" onclick="openPopup('ai-room-popup')">
+                    <h4 class="feature-title">AI Room Recommendations</h4>
+                    <img src="images/Controller Room.png" alt="AI Room Icon" class="feature-icon">
+                </div>
+                <div class="feature-card" onclick="openPopup('chatbot-popup')">
+                    <h4 class="feature-title">AI Chatbot</h4>
+                    <img src="images/AI chatbot.webp" alt="Chatbot Icon" class="feature-icon">
+                </div>
+                <div class="feature-card" onclick="openPopup('mess-popup')">
+                    <h4 class="feature-title">Mess System</h4>
+                    <img src="images/Mess System.webp" alt="Mess System Icon" class="feature-icon">
+                </div>
+            </div>
+    
+            <!-- Stage 3 -->
+            <div class="stage-card">
+                <h3>Stage 3</h3>
+                <div class="feature-card" onclick="openPopup('financials-popup')">
+                    <h4 class="feature-title">Student Financials</h4>
+                    <img src="images/Student Financials.webp" alt="Financials Icon" class="feature-icon">
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
+    <!-- Subtype Popups -->
+    <div id="leave-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('leave-popup')">&times;</span>
+            <h4>Leave Letter System</h4>
+            <p>Apply for leave easily through a digital system that tracks requests and approvals.</p>
+        </div>
+    </div>
+
+    <div id="laundry-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('laundry-popup')">&times;</span>
+            <h4>Laundry System</h4>
+            <p>Submit laundry requests and track the status of your clothes with a simple form-based system.</p>
+        </div>
+    </div>
+
+    <div id="Report-Forms" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('Report-Forms')">&times;</span>
+            <h4>Report-Forms</h4>
+            <p>This sample Student Progress Report Form is designed to provide a comprehensive overview of a student’s academic performance and behavior in a specific period.</p>
+        </div>
+    </div>
+
+    <div id="ai-room-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('ai-room-popup')">&times;</span>
+            <h4>AI Room Recommendations</h4>
+            <p>Get AI-based suggestions for room selection based on preferences and availability.</p>
+        </div>
+    </div>
+
+    <div id="chatbot-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('chatbot-popup')">&times;</span>
+            <h4>AI Chatbot</h4>
+            <p>24/7 AI-powered assistant to help you with queries related to the hostel.</p>
+        </div>
+    </div>
+
+    <div id="mess-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('mess-popup')">&times;</span>
+            <h4>Mess System</h4>
+            <p>Manage and modify your meal plans with ease.</p>
+        </div>
+    </div>
+
+    <div id="financials-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('financials-popup')">&times;</span>
+                <h4>Student Financials</h4>
+                <p>Track your hostel-related expenses in one place.</p>
+            <ul>
+                <li>Mess Bill - View and manage your mess payments.</li>
+                <li>Hostel Fee - Track accommodation fees.</li>
+                <li>Other Expenses - Monitor any additional charges.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Modal for Feature Details -->
+    <div class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <ul id="modal-steps"></ul>
+        </div>
+    </div>
+
+    <script >
+        function openPopup(id) {
+        document.getElementById(id).style.display = "flex";
+    }
+
+    function closePopup(id) {
+        document.getElementById(id).style.display = "none";
+    }
+    </script>
+
+    
+</body>
+</html>

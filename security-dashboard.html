@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Dashboard</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="header-container">
+        <img src="images/hmslogo.png" alt="HMS Logo" class="logo">
+        <h1>🏫 HMS - Security Dashboard</h1>
+    </div>
+</header>
+
+<main>
+    <h2>🔐 Security Leave Verification</h2>
+
+    <!-- Security Code Verification Card -->
+    <div class="card">
+        <h3>🟢 Enter Student's 6-Digit Security Code</h3>
+        <input type="text" id="securityCodeInput" placeholder="Enter Code Here" maxlength="6">
+        <button onclick="verifySecurityCode()">✅ Verify Code</button>
+
+        <p id="verificationResult" style="margin-top: 10px; font-size: 18px; color: #007bff;"></p>
+    </div>
+</main>
+
+
+<script src="security-script.js"></script>
+</body>
+</html>

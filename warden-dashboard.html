@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warden Dashboard</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <img src="images/hmslogo.png" alt="HMS Logo" class="logo">
+        <h1>🏫 HMS - Warden Dashboard</h1>
+    </div>
+</header>
+
+<main>
+    <h2>🏘️ Welcome, Warden</h2>
+
+   <!-- 📄 Leave Approvals Card -->
+<div class="warcard">
+    <div class="card">
+        <h3>📄 Pending Leave Approvals</h3>
+        <div id="wardenLeaveRequests">
+            <p id="leaveMessage">📭 No pending leave requests.</p> <!-- Dynamic content will replace this -->
+        </div>
+    </div>
+</div>
+
+<!-- 📄 Leave Details Modal -->
+<div id="leaveDetailsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>📄 Leave Request Details</h2>
+        <table id="leaveDetailsTable" border="1" cellpadding="5" cellspacing="0">
+            <!-- Dynamic leave details will be inserted here -->
+        </table>
+        <br>
+        <button onclick="approveLeave()">✅ Approve</button>
+        <button onclick="rejectLeave()">❌ Reject</button>
+    </div>
+</div>
+
+
+    <!-- 📝 Student Reports Card -->
+    <div class="card">
+        
+        <h3>📢 Student Reports</h3>
+        <div id="wardenReports">
+            <p id="reportMessage">📭 No reports submitted.</p> <!-- Dynamic content will replace this -->
+        </div>
+    
+    </div>
+     </div>
+</main>
+
+
+
+<script src="warden-script.js"></script>
+</body>
+</html>

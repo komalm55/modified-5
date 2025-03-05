@@ -1,0 +1,62 @@
+
+
+
+
+
+
+
+
+
+
+Index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHMS - Hostel Management System</title>
+    <link rel="stylesheet" href="home.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="SmartHMS Logo">
+            <span>SmartHMS <small>Live Better</small></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">About SmartHMS</a></li>
+                <li><a href="#">SignUp</a></li>
+                <li><a href="#">SignIn</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-image">
+                <img src="smartHMS-logo.png" alt="SmartHMS">
+            </div>
+            <div class="hero-content">
+                <h1>All your university needs On one platform</h1>
+                <p>
+                    Digitally connecting students, wardens, and hostel administrators. Empowering students with seamless hostel management, streamlining accommodation processes, fostering a secure and cooperative living environment, and enhancing the overall hostel experience. Ensuring data security through encrypted records, safeguarding every individual’s information.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © All rights reserved | SmartHMS</p>
+        <div class="contact">
+            <a href="mailto:hostelhms@example.com">hostelhms@example.com</a>
+            <span>📞 +91 12345 67890</span>
+        </div>
+    </footer>
+
+</body>
+</html>

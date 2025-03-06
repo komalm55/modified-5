@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
+
     <!-- Header Section -->
     <header class="header-container">
         <div class="logo-title">
@@ -23,14 +24,21 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="container section-spacing">
-        <h1>Welcome to the Hostel Management System</h1>
-        <p>Manage your hostel experience seamlessly.</p>
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <h1>Welcome to the Hostel Management System</h1>
+            <p>Manage your hostel experience seamlessly.</p>
+        </div>
     </section>
+    
+        
+
 
     <!-- Features Section -->
     <section id="features" class="container section-spacing">
+        
         <h2 class="features-title">Our Features</h2>
+        <p class="features-description">Explore the features of our Hostel Management System.</p>
         <div class="features-grid">
     
             <!-- Stage 1 -->
@@ -44,7 +52,7 @@
                     <h4 class="feature-title">Laundry System</h4>
                     <img src="images/laundry.png" alt="Laundry Icon" class="feature-icon">
                 </div>
-                <div class="feature-card" onclick="openPopup('Report-Forms')">
+                <div class="feature-card" onclick="openPopup('report-forms-popup')">
                     <h4 class="feature-title">Report-Forms</h4>
                     <img src="images/report-forms.png" alt="Report Forms Icon" class="feature-icon">
                 </div>
@@ -82,65 +90,255 @@
     <!-- Subtype Popups -->
     <div id="leave-popup" class="popup">
         <div class="popup-content">
-            <span class="close" onclick="closePopup('leave-popup')">&times;</span>
+            <span class="close" onclick="closePopup('popup-id')">&times;</span>
+
             <h4>Leave Letter System</h4>
             <p>Apply for leave easily through a digital system that tracks requests and approvals.</p>
+            
+            <h5>Process Hierarchy:</h5>
+            <ol>
+                <li><strong>Student:</strong> Submits a leave request with details (name, roll number, reason, duration, etc.).</li>
+                <li><strong>Assigned Teacher:</strong> Reviews and approves/rejects the leave request.</li>
+                <li><strong>Head of Department (HOD):</strong> If approved by the teacher, the request moves to the HOD for further verification.</li>
+                <li><strong>Warden:</strong> The final approval is given by the hostel warden.</li>
+                <li><strong>Security Desk:</strong> Once approved, the security team gets notified with the student's unique leave ID.</li>
+            </ol>
+    
+            <h5>Key Features:</h5>
+            <ul>
+                <li>Real-time tracking of leave status.</li>
+                <li>Automated notifications to stakeholders.</li>
+                <li>History log of all leave requests.</li>
+            </ul>
         </div>
     </div>
-
+    
     <div id="laundry-popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup('laundry-popup')">&times;</span>
             <h4>Laundry System</h4>
             <p>Submit laundry requests and track the status of your clothes with a simple form-based system.</p>
+            
+            <h5>Process Hierarchy:</h5>
+            <ol>
+                <li><strong>Student:</strong> Selects laundry services, enters details (items, quantity, preferences), and submits a request.</li>
+                <li><strong>Laundry Staff:</strong> Reviews the request, assigns a collection time, and updates the system.</li>
+                <li><strong>Pickup & Processing:</strong> Clothes are collected, cleaned, and tracked in the system.</li>
+                <li><strong>Notification:</strong> Student receives real-time updates on the status (In Progress, Ready for Pickup).</li>
+                <li><strong>Delivery/Pickup:</strong> The student collects the laundry, and the request is marked as completed.</li>
+            </ol>
+    
+            <h5>Key Features:</h5>
+            <ul>
+                <li>Online laundry request submission.</li>
+                <li>Live tracking of laundry status.</li>
+                <li>Automated reminders for collection.</li>
+            </ul>
         </div>
     </div>
-
-    <div id="Report-Forms" class="popup">
+    
+    <div id="report-forms-popup" class="popup">
         <div class="popup-content">
-            <span class="close" onclick="closePopup('Report-Forms')">&times;</span>
-            <h4>Report-Forms</h4>
-            <p>This sample Student Progress Report Form is designed to provide a comprehensive overview of a student’s academic performance and behavior in a specific period.</p>
+            <span class="close" onclick="closePopup('report-forms-popup')">&times;</span>
+            <h4>Report Forms</h4>
+            <p>This form allows students to submit complaints, maintenance requests, or general reports directly to the warden.</p>
+    
+            <h5>Process Hierarchy:</h5>
+            <ol>
+                <li><strong>Student:</strong> Fills out the report form with necessary details (issue type, description, urgency).</li>
+                <li><strong>Warden:</strong> Reviews the submitted report and verifies the details.</li>
+                <li><strong>Warden Decision:</strong> Takes appropriate action (approves maintenance, forwards to concerned staff, or provides a resolution).</li>
+                <li><strong>Student:</strong> Receives an update on the report status.</li>
+            </ol>
+    
+            <h5>Key Features:</h5>
+            <ul>
+                <li>Easy submission process for complaints and requests.</li>
+                <li>Direct communication between student and warden.</li>
+                <li>Track report status in real-time.</li>
+                <li>Quick resolution and feedback system.</li>
+            </ul>
         </div>
     </div>
-
+    
     <div id="ai-room-popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup('ai-room-popup')">&times;</span>
             <h4>AI Room Recommendations</h4>
             <p>Get AI-based suggestions for room selection based on preferences and availability.</p>
+            
+            <h5>Process Hierarchy:</h5>
+            <ol>
+                <li><strong>Student:</strong> Inputs preferences such as room type, location, and roommates.</li>
+                <li><strong>AI System:</strong> Analyzes preferences and available rooms to generate recommendations.</li>
+                <li><strong>Student:</strong> Reviews and selects a recommended room.</li>
+                <li><strong>System Confirmation:</strong> Confirms the room allocation and updates the database.</li>
+            </ol>
+    
+            <h5>Key Features:</h5>
+            <ul>
+                <li>Personalized room recommendations.</li>
+                <li>Real-time availability check.</li>
+                <li>Automated room allocation process.</li>
+            </ul>
         </div>
     </div>
-
+    
     <div id="chatbot-popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup('chatbot-popup')">&times;</span>
             <h4>AI Chatbot</h4>
             <p>24/7 AI-powered assistant to help you with queries related to the hostel.</p>
+            
+            <h5>Key Features:</h5>
+            <ul>
+                <li>Instant responses to common queries.</li>
+                <li>Guidance on hostel facilities and services.</li>
+                <li>Real-time support for urgent issues.</li>
+            </ul>
         </div>
     </div>
-
+    
     <div id="mess-popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup('mess-popup')">&times;</span>
             <h4>Mess System</h4>
             <p>Manage and modify your meal plans with ease.</p>
+    
+            <h5>Key Features:</h5>
+            <ul>
+                <li>View daily and weekly menus.</li>
+                <li>Customize meal preferences.</li>
+                <li>Track meal consumption and expenses.</li>
+            </ul>
         </div>
     </div>
-
+    
+    
     <div id="financials-popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup('financials-popup')">&times;</span>
-                <h4>Student Financials</h4>
-                <p>Track your hostel-related expenses in one place.</p>
+            <h4>Student Financials</h4>
+            <p>Track your hostel-related expenses in one place.</p>
             <ul>
                 <li>Mess Bill - View and manage your mess payments.</li>
                 <li>Hostel Fee - Track accommodation fees.</li>
                 <li>Other Expenses - Monitor any additional charges.</li>
             </ul>
+            
+            <h5>Key Features:</h5>
+            <ul>
+                <li>Detailed expense breakdown.</li>
+                <li>Payment reminders and alerts.</li>
+                <li>Secure online payment options.</li>
+            </ul>
         </div>
     </div>
 
+    
+
+
+<!-- Testimonials Section -->
+<!-- Testimonials Section -->
+<section id="testimonials" class="container section-spacing">
+    <h2>What Students Say</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial active">
+            <p>⭐️⭐️⭐️⭐️⭐️ "The leave system is so smooth! No more paperwork!"</p>
+            <h4>- Amit, CSE</h4>
+        </div>
+        <div class="testimonial">
+            <p>⭐️⭐️⭐️⭐️⭐️ "Mess feedback feature is really useful!"</p>
+            <h4>- Priya, ECE</h4>
+        </div>
+        <div class="testimonial">
+            <p>⭐️⭐️⭐️⭐️⭐️ "Laundry tracking makes my life easier."</p>
+            <h4>- Raj, MECH</h4>
+        </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="testimonial-dots">
+        <span class="dot active" onclick="showTestimonial(0)"></span>
+        <span class="dot" onclick="showTestimonial(1)"></span>
+        <span class="dot" onclick="showTestimonial(2)"></span>
+    </div>
+</section>
+
+<!-- Achievements & Stats 
+<section id="stats" class="container section-spacing">
+    <h2>Our Achievements</h2>
+    <div class="stats-grid">
+        <div class="stat-card">🏠 <h3>500+</h3><p>Students Accommodated</p></div>
+        <div class="stat-card">📜 <h3>2,000+</h3><p>Leave Requests Processed</p></div>
+        <div class="stat-card">🍽 <h3>4.8/5</h3><p>Mess Rating</p></div>
+    </div>
+</section>-->
+
+<!-- Announcements Section -->
+<section id="announcements" class="container section-spacing">
+    <h2>Latest Announcements</h2>
+    <ul class="announcement-list">
+        <li>📢 [NEW] Water Supply Maintenance on March 10th</li>
+        <li>🍽 [Alert] Mess Menu Updated for April</li>
+        <li>🏠 [Reminder] Hostel Fee Due by March 15th</li>
+    </ul>
+</section>
+
+<!-- Image Gallery -->
+<section id="gallery" class="container section-spacing">
+    <h2>Hostel Life</h2>
+    <div class="gallery-grid">
+        <img src="images\hostel.jpg" alt="Hostel Room">
+        <img src="images\mess-area.jpg" alt="Mess Area">
+        <img src="images\common-area.jpg" alt="Common Area">
+    </div>
+</section>
+
+<!-- Contact & Support 
+<section id="contact" class="container section-spacing">
+    <h2>Need Help?</h2>
+    <p>Email: support@hostel.com | Phone: +91 98765 43210</p>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>-->
+
+    <!-- About Us Section -->
+    <section id="about-us" class="about-container">
+        <div class="about-content">
+            <h2 class="about-title">About Us</h2>
+            <p class="about-description">
+                Welcome to the Hostel Management System! Our platform is designed to streamline hostel operations, making life easier for students, staff, and management. From leave requests to AI-based room allocation, we provide an all-in-one solution.
+            </p>
+            <div class="team-container">
+                <div class="team-member">
+                    <!--<img src="images/founder.jpg" alt="Founder" class="team-img">-->
+                    <h3>Mohammad Fazil</h3>
+                    <p>Developer</p>
+                </div>
+                <div class="team-member">
+                    <!--<img src="images/backend.jpg" alt="Backend Developer" class="team-img">-->
+                    <h3>Dheeraj</h3>
+                    <p>Backend Developer</p>
+                </div>
+                <div class="team-member">
+                    <!--<img src="images/ui-designer.jpg" alt="UI Designer" class="team-img">-->
+                    <h3>Komal</h3>
+                    <p>UI/UX Designer</p>
+                </div>
+                <div class="team-member">
+                    <!--<img src="images/ui-designer.jpg" alt="UI Designer" class="team-img">-->
+                    <h3>Ajay</h3>
+                    <p>Designer</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
     <!-- Modal for Feature Details -->
     <div class="modal">
@@ -151,15 +349,46 @@
         </div>
     </div>
 
-    <script >
-        function openPopup(id) {
-        document.getElementById(id).style.display = "flex";
-    }
+    <script src="home.js"></script>
 
-    function closePopup(id) {
-        document.getElementById(id).style.display = "none";
-    }
-    </script>
+    <button id="scrollTopBtn" title="Go Up">🔝</button>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>Hostel Management</h3>
+            <p>Making hostel life easier with seamless leave requests, mess feedback, and more.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faq">FAQs</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@hostel.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Hostel Management. All Rights Reserved.</p>
+    </div>
+</footer>
 
     
 </body>
